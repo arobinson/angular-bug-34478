@@ -12,6 +12,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build.froala": "cd ../angular-froala-wysiwyg && npm i && npm run build",
+    "rebuild.froala": "cd ../angular-froala-wysiwyg && npm i && npm run build && cd dist && npm pack && cd ../../test-app && npm i ../angular-froala-wysiwyg/dist/angular-froala-wysiwyg-3.0.6.tgz",
+    "build.serve": "npm run build.froala && ng s",
     "preinstall": "npm run build.froala"
   },
   "private": true,
@@ -24,7 +26,7 @@
     "@angular/platform-browser": "~9.0.0-rc.5",
     "@angular/platform-browser-dynamic": "~9.0.0-rc.5",
     "@angular/router": "~9.0.0-rc.5",
-    "angular-froala-wysiwyg": "file:../angular-froala-wysiwyg/dist",
+    "angular-froala-wysiwyg": "file:../angular-froala-wysiwyg/dist/angular-froala-wysiwyg-3.0.6.tgz",
     "froala-editor": "^3.0.6",
     "rxjs": "~6.5.3",
     "tslib": "^1.10.0",
